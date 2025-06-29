@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sevgilime Özel</title>
+  <style>
+    body {
+      background: #f8c8dc;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+    header {
+      text-align: center;
+      margin-top: 40px;
+    }
+    h1 {
+      color: #d6336c;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 8px #fff6fa;
+    }
+    .floating-hearts {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      position: relative;
+    }
+    #loveButton {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 20px 50px;
+      font-size: 1.5rem;
+      margin: 40px 0 30px 0;
+      cursor: pointer;
+      box-shadow: 0 4px 20px #f8c8dc80;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    #loveButton:hover {
+      transform: scale(1.15);
+      box-shadow: 0 8px 32px #d6336c40;
+    }
+    .note-section {
+      background: #fff0f6;
+      border-radius: 20px;
+      padding: 20px 30px;
+      margin: 20px 0;
+      box-shadow: 0 2px 12px #f8c8dc60;
+      width: 350px;
+      max-width: 90vw;
+    }
+    .note-section h2 {
+      color: #d6336c;
+      margin-top: 0;
+    }
+    #personalNote {
+      width: 100%;
+      min-height: 250px;
+      border-radius: 12px;
+      border: 1px solid #f8c8dc;
+      padding: 10px;
+      font-size: 1rem;
+      background: #fff;
+      resize: vertical;
+      margin-top: 10px;
+    }
+    .countdowns {
+      display: flex;
+      gap: 30px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .countdown {
+      background: #fff0f6;
+      border-radius: 16px;
+      padding: 18px 24px;
+      box-shadow: 0 2px 12px #f8c8dc60;
+      min-width: 220px;
+      text-align: center;
+    }
+    .countdown h3 {
+      color: #d6336c;
+      margin-top: 0;
+    }
+    #birthdayCountdown, #meetingCountdown {
+      font-size: 1.2rem;
+      color: #d6336c;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .floating-heart {
+      position: absolute;
+      bottom: -50px;
+      pointer-events: none;
+      animation: floatUp 5s linear forwards;
+      will-change: transform, opacity;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        opacity: 1;
+      }
+      80% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.2) rotate(20deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-hearts"></div>
+  <header>
+    <h1>Prensesimin doğum gününe kalan süre</h1>
+    <div id="birthdayCountdown"></div>
+  </header>
+  <main>
+    <section class="countdowns">
+      <div class="countdown">
+        <h3>Tekrar birlikte olmamıza kalan süre</h3>
+        <div id="meetingCountdown"></div>
+      </div>
+    </section>
+    <button id="loveButton">Click Me 🎵</button>
+    <section class="note-section">
+      <h2>Sevgilime Not</h2>
+      <textarea id="personalNote">Şimdi bu ne diyo olabilirsin açıklayayım sana, Suen ben seni hala çok seviyorum ve sana çok aşığım ne olursa olsun aramızda aldatma olduğu sürece senden vazgeçmeyeceğim benim mutlu olduğum yer senin yanın bu yüzden gerekirse her gün senin hayalinle yaşamaya hazırım zaten senden vazgeçemem ki her gün yatmadan senin fotoğraflarına bakıyorum, kötü hissettiğim zaman da bakıyorum kısaca ne yaparsam yapayım illa ki seni hatırlatıyor bana sen artık hayatımın bir parçasısın, hayatımsın, istediğim tek şey değil her şey sensin 
+sevilmeye dair ne varsa hepsi sensin seni bulmuşken kaybetmek istemiyorum seni kaybetmekten o kadar korkuyorum ki bilemezsin ve seni kaybetmemek için ne gerekirse elimden gelenin fazlasını yapcam 
+Şuan elimizde olmayan nedenlerden dolayı ara vermek zorunda olabiliriz ama seninle yapacağım onca şey arasında seni beklemek çok küçük bir şey benim için daha beraber yapacağımız yaşayacağımız çok şey var güzelim lütfen beni bırakma bizi bırakma çünkü sen bana seni açık açık seni istemiyorum demediğin sürece veya hayatına başkasını almadığın sürece ben seni bırakmayacağım benim için herkesten ve her şeyden kıymetlisin
+Bu gördüğün şeyi yaptım çünkü benim için düşündüğünden daha değerlisin ve seni mutlu edeceğini düşündüm ve benim amacım da seni her zaman mutlu etmek ,seninle olmasam bile 
+Kendine çok çok dikkat balım ne zaman istersen yanındayım biliyorsun söylememe gerek yok seni çok seviyorum şapşal (sadece lütfen eğer öyle bir şey mümkün olursa doğum gününüz ve doğum günümü kutlayalım biliyorsun benim için ne kadar şey ifade ettiğini)</textarea>
+    </section>
+  </main>
+  <script>
+    // --- Kalplerin Süzülmesi ---
+    const heartsContainer = document.querySelector('.floating-hearts');
+    function createHeart() {
+      const heart = document.createElement('span');
+      heart.textContent = '❤️';
+      heart.className = 'floating-heart';
+      const size = Math.random() * 24 + 24; // 24px to 48px
+      heart.style.fontSize = `${size}px`;
+      heart.style.left = `${Math.random() * 100}vw`;
+      heart.style.animationDuration = `${3 + Math.random() * 3}s`;
+      heart.style.opacity = Math.random() * 0.5 + 0.5;
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+    setInterval(createHeart, 400);
+
+    // --- Buton Alert ---
+    document.getElementById('loveButton').addEventListener('click', function() {
+      alert('Sana çok çok çok asigimmm güzelimmm');
+    });
+
+    // --- Sayaçlar ---
+    // Doğum günü: 11 Ağustos (her yıl)
+    // Tekrar birlikte olma: 26 Haziran 2026
+    function getNextBirthday(month, day) {
+      const now = new Date();
+      let year = now.getFullYear();
+      const birthday = new Date(year, month - 1, day, 0, 0, 0);
+      if (birthday < now) {
+        birthday.setFullYear(year + 1);
+      }
+      return birthday;
+    }
+    const meetingDate = new Date('2026-06-26T00:00:00'); // 26 Haziran 2026
+
+    function updateCountdown(id, targetDate) {
+      const now = new Date();
+      let diff = targetDate - now;
+      if (diff < 0) {
+        document.getElementById(id).textContent = "Süre doldu!";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById(id).textContent =
+        `${days} gün ${hours} saat ${minutes} dakika ${seconds} saniye`;
+    }
+
+    setInterval(() => {
+      updateCountdown('birthdayCountdown', getNextBirthday(8, 11));
+      updateCountdown('meetingCountdown', meetingDate);
+    }, 1000);
+
+    // --- Notu localStorage'a kaydet ---
+    const note = document.getElementById('personalNote');
+    note.value = localStorage.getItem('personalNote') || note.value;
+    note.addEventListener('input', () => {
+      localStorage.setItem('personalNote', note.value);
+    });
+  </script>
+</body>
+</html>
